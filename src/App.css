@@ -1,4 +1,12 @@
 @import './styles/base.css';
-@import './styles/hero-login.css';
-@import './styles/sections.css';
-@import './styles/modals-cart.css';
+@import './styles/loader.css';
+@import './styles/login.css';
+@import './styles/navbar.css';
+@import './styles/hero.css';
+@import './styles/categories-products.css';
+@import './styles/modal.css';
+@import './styles/cart-wishlist.css';
+@import './styles/chat.css';
+@import './styles/admin.css';
+@import './styles/legacy-sections.css';
+@import './styles/responsive.css';

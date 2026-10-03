@@ -1,0 +1,75 @@
+.login-gate-3d {
+      position: fixed; inset: 0; background: var(--bg-dark); z-index: 9999;
+        display: flex; align-items: center; justify-content: center; overflow: hidden;
+        }
+        .login-orbs-container { position: absolute; inset: 0; perspective: 1000px; }
+        .login-floating-orb { position: absolute; border-radius: 50%; animation: orbDrift linear infinite; filter: blur(2px); }
+        @keyframes orbDrift {
+          0% { transform: translate(0,0) scale(1); }
+            33% { transform: translate(30px,-40px) scale(1.1); }
+              66% { transform: translate(-20px,30px) scale(0.9); }
+                100% { transform: translate(0,0) scale(1); }
+                }
+                .login-grid-floor {
+                  position: absolute; bottom: 0; left: -50%; width: 200%; height: 50%;
+                    background-image: linear-gradient(rgba(168,85,247,0.15) 1px, transparent 1px),
+                                         linear-gradient(90deg, rgba(168,85,247,0.15) 1px, transparent 1px);
+                                           background-size: 50px 50px; transform: perspective(500px) rotateX(70deg);
+                                             mask-image: linear-gradient(to top, black, transparent);
+                                             }
+
+                                             .login-3d-card-wrapper { position: relative; z-index: 2; transition: transform 0.15s ease-out; width: 420px; max-width: 90vw; }
+                                             .login-3d-card-glow {
+                                               position: absolute; inset: -2px; background: var(--gradient1); border-radius: 26px;
+                                                 filter: blur(25px); opacity: 0.5; animation: pulseGlow 3s ease-in-out infinite;
+                                                 }
+                                                 .login-3d-card {
+                                                   position: relative; background: rgba(19,19,26,0.85); backdrop-filter: blur(30px);
+                                                     border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 45px 36px;
+                                                       box-shadow: var(--shadow); overflow: hidden; transform-style: preserve-3d;
+                                                       }
+                                                       .login-3d-shine {
+                                                         position: absolute; inset: 0; background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.08) 50%, transparent 70%);
+                                                           pointer-events: none;
+                                                           }
+                                                           .login-3d-logo { text-align: center; margin-bottom: 25px; }
+                                                           .login-3d-logo-icon { position: relative; width: 70px; height: 70px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; }
+                                                           .login-3d-logo-icon span { font-size: 34px; background: var(--gradient1); width: 64px; height: 64px; border-radius: 18px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; box-shadow: 0 10px 30px rgba(168,85,247,0.5); }
+                                                           .logo-ring { position: absolute; inset: -8px; border: 2px solid rgba(168,85,247,0.3); border-radius: 22px; animation: spin360 8s linear infinite; }
+                                                           .ring-2 { inset: -16px; border-color: rgba(99,102,241,0.2); animation-duration: 12s; animation-direction: reverse; }
+                                                           .login-3d-logo h1 { font-family: var(--font2); font-size: 26px; font-weight: 800; letter-spacing: 1px; }
+                                                           .login-3d-logo h1 span { background: var(--gradient1); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+                                                           .login-3d-logo p { color: var(--text-muted); font-size: 13px; margin-top: 6px; }
+
+                                                           .login-3d-error { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); padding: 10px; border-radius: 10px; font-size: 13px; color: #ef4444; margin-bottom: 15px; text-align: center; }
+
+                                                           .login-3d-form { display: flex; flex-direction: column; gap: 22px; }
+                                                           .login-3d-input-group { position: relative; }
+                                                           .login-3d-input {
+                                                             width: 100%; padding: 14px 4px; background: transparent; border: none; border-bottom: 2px solid var(--border);
+                                                               color: var(--text); font-size: 15px; outline: none; transition: border-color 0.3s;
+                                                               }
+                                                               .login-3d-input-group label {
+                                                                 position: absolute; left: 4px; top: 14px; color: var(--text-dim); font-size: 15px;
+                                                                   pointer-events: none; transition: all 0.25s ease;
+                                                                   }
+                                                                   .login-3d-input:focus ~ label, .login-3d-input:not(:placeholder-shown) ~ label {
+                                                                     top: -12px; font-size: 11px; color: var(--primary); text-transform: uppercase; letter-spacing: 1px;
+                                                                     }
+                                                                     .input-underline { position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--gradient1); transition: width 0.3s; }
+                                                                     .login-3d-input:focus ~ .input-underline { width: 100%; }
+                                                                     .login-3d-input:focus { border-color: transparent; }
+
+                                                                     .login-3d-btn {
+                                                                       position: relative; overflow: hidden; padding: 16px; background: var(--gradient1); color: white;
+                                                                         border-radius: 14px; font-size: 15px; font-weight: 700; margin-top: 8px; letter-spacing: 0.5px;
+                                                                         }
+                                                                         .login-3d-btn:hover:not(:disabled) { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(168,85,247,0.45); }
+                                                                         .login-3d-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+                                                                         .btn-shine { position: absolute; top: 0; left: -100%; width: 60%; height: 100%; background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent); animation: shineMove 2.5s ease-in-out infinite; }
+                                                                         @keyframes shineMove { 0% { left: -60%; } 100% { left: 120%; } }
+
+                                                                         .login-3d-footer { text-align: center; margin-top: 22px; font-size: 13px; color: var(--text-muted); }
+                                                                         .login-3d-footer span { color: var(--primary); font-weight: 700; cursor: pointer; }
+                                                                         .login-3d-footer span:hover { text-decoration: underline; }
+                                                                         .login-3d-hint { text-align: center; margin-top: 16px; font-size: 11px; color: var(--text-dim); background: var(--glass); padding: 8px; border-radius: 10px; }

@@ -1,0 +1,22 @@
+.chat-widget-btn {
+      position: fixed; bottom: 25px; left: 25px; width: 56px; height: 56px; background: var(--gradient1);
+        border-radius: 18px; color: white; font-size: 24px; z-index: 3000; box-shadow: 0 15px 35px rgba(168,85,247,0.4);
+          display: flex; align-items: center; justify-content: center;
+          }
+          .chat-widget-btn:hover { transform: translateY(-4px) scale(1.05); }
+          .chat-pulse { position: absolute; inset: -4px; border: 2px solid var(--primary); border-radius: 22px; animation: chatPing 2s infinite; }
+          @keyframes chatPing { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.3); opacity: 0; } }
+
+          .chat-widget-box { position: fixed; bottom: 95px; left: 25px; width: 330px; max-width: 90vw; height: 440px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 22px; z-index: 3000; display: flex; flex-direction: column; overflow: hidden; box-shadow: var(--shadow); animation: chatPop 0.3s ease; }
+          @keyframes chatPop { from { transform: translateY(20px) scale(0.9); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }
+          .chat-widget-header { background: var(--gradient1); padding: 16px; display: flex; align-items: center; gap: 12px; }
+          .chat-avatar { width: 38px; height: 38px; background: rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+          .chat-title { font-weight: 700; font-size: 14px; color: white; }
+          .chat-status { font-size: 11px; color: rgba(255,255,255,0.85); }
+          .chat-widget-messages { flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+          .chat-message { max-width: 80%; padding: 10px 14px; border-radius: 14px; font-size: 13px; line-height: 1.4; }
+          .chat-message.bot { background: var(--glass); align-self: flex-start; border-bottom-left-radius: 4px; }
+          .chat-message.user { background: var(--gradient1); color: white; align-self: flex-end; border-bottom-right-radius: 4px; }
+          .chat-widget-input { display: flex; padding: 12px; border-top: 1px solid var(--border); gap: 8px; }
+          .chat-widget-input input { flex: 1; background: var(--glass); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; color: var(--text); font-size: 13px; outline: none; }
+          .chat-widget-input button { width: 40px; background: var(--gradient1); color: white; border-radius: 12px; font-size: 16px; }

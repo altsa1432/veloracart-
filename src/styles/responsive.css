@@ -1,0 +1,27 @@
+@media (max-width: 1200px) {
+      .hero-3d-title { font-size: 48px; }
+        .products-grid-3d { grid-template-columns: repeat(3,1fr); }
+          .categories-grid-3d { grid-template-columns: repeat(3,1fr); }
+            .admin-stats-grid { grid-template-columns: repeat(2,1fr); }
+            }
+            @media (max-width: 992px) {
+              .nav-3d-links, .nav-3d-search, .hero-3d-visual { display: none; }
+                .nav-3d-mobile-toggle { display: flex; }
+                  .hero-3d-container, .deals-banner, .modal-3d-grid { grid-template-columns: 1fr; text-align: center; }
+                    .hero-3d-buttons, .hero-3d-stats, .deals-timer { justify-content: center; }
+                      .products-grid-3d, .features-grid, .testimonials-grid, .footer-grid { grid-template-columns: repeat(2,1fr); }
+                        .admin-panel-3d { flex-direction: column; }
+                          .admin-sidebar { width: 100%; flex-direction: row; overflow-x: auto; }
+                            .admin-nav-item.exit { margin-top: 0; }
+                            }
+                            @media (max-width: 640px) {
+                              .hero-3d-title { font-size: 34px; }
+                                .section-title-3d { font-size: 28px; }
+                                  .products-grid-3d, .features-grid, .testimonials-grid, .footer-grid, .admin-stats-grid, .admin-form-grid { grid-template-columns: 1fr; }
+                                    .categories-grid-3d { grid-template-columns: repeat(2,1fr); }
+                                      .newsletter-form, .hero-3d-buttons, .form-row { flex-direction: column; }
+                                        .deals-banner, .newsletter-box { padding: 30px; }
+                                          .modal-3d-image-section { min-height: 280px; }
+                                            .chat-widget-box { left: 10px; width: calc(100vw - 20px); }
+                                              .back-to-top { bottom: 20px; right: 20px; }
+                                              }

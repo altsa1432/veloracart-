@@ -1,0 +1,56 @@
+.deals { padding: 90px 0; position: relative; z-index: 2; }
+.deals-banner { background: var(--bg-card); border: 1px solid var(--border); border-radius: 30px; padding: 50px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; position: relative; overflow: hidden; }
+.deals-tag { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: rgba(239,68,68,0.15); color: #ef4444; border-radius: 50px; font-size: 12px; font-weight: 700; margin-bottom: 18px; }
+.deals-title { font-family: var(--font2); font-size: 38px; font-weight: 800; margin-bottom: 12px; }
+.deals-desc { font-size: 15px; color: var(--text-muted); margin-bottom: 25px; }
+.deals-timer { display: flex; gap: 10px; margin-bottom: 25px; }
+.deals-timer-item { width: 70px; height: 75px; background: var(--glass); border: 1px solid var(--border); border-radius: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.deals-timer-num { font-family: var(--font2); font-size: 26px; font-weight: 800; background: var(--gradient1); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.deals-timer-label { font-size: 10px; color: var(--text-dim); text-transform: uppercase; }
+.deals-visual { display: flex; justify-content: center; align-items: center; position: relative; }
+.deals-product-img { font-size: 160px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4)); animation: floatY 4s ease-in-out infinite; }
+.deals-discount { position: absolute; top: 10px; right: 20px; width: 80px; height: 80px; background: var(--gradient2); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; color: white; animation: spin360 12s linear infinite; }
+
+.features { padding: 90px 0; position: relative; z-index: 2; }
+.features-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.feature-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 30px 20px; text-align: center; transition: 0.3s; }
+.feature-card:hover { transform: translateY(-8px); border-color: rgba(168,85,247,0.3); }
+.feature-icon { width: 60px; height: 60px; background: var(--glass); border: 1px solid var(--border); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 26px; }
+.feature-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.feature-desc { font-size: 13px; color: var(--text-muted); }
+
+.testimonials { padding: 90px 0; position: relative; z-index: 2; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.testimonial-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 28px; transition: 0.3s; }
+.testimonial-card:hover { transform: translateY(-6px); border-color: rgba(168,85,247,0.2); }
+.testimonial-stars { color: var(--accent); margin-bottom: 12px; font-size: 13px; }
+.testimonial-text { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px; font-style: italic; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-avatar { width: 42px; height: 42px; background: var(--gradient1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; }
+.testimonial-name { font-size: 14px; font-weight: 700; }
+.testimonial-role { font-size: 11px; color: var(--text-dim); }
+
+.newsletter { padding: 90px 0; position: relative; z-index: 2; }
+.newsletter-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 28px; padding: 60px; text-align: center; position: relative; overflow: hidden; }
+.newsletter-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gradient1); }
+.newsletter-title { font-family: var(--font2); font-size: 34px; font-weight: 800; margin-bottom: 10px; }
+.newsletter-desc { font-size: 15px; color: var(--text-muted); margin-bottom: 30px; max-width: 480px; margin-left: auto; margin-right: auto; }
+.newsletter-form { display: flex; max-width: 480px; margin: 0 auto; gap: 10px; }
+.newsletter-input { flex: 1; padding: 15px 18px; background: var(--glass); border: 1px solid var(--border); border-radius: 14px; color: var(--text); font-size: 14px; outline: none; }
+.newsletter-input:focus { border-color: var(--primary); }
+.newsletter-btn { padding: 15px 28px; background: var(--gradient1); color: white; border-radius: 14px; font-size: 14px; font-weight: 700; }
+.newsletter-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(168,85,247,0.4); }
+
+.footer { padding: 70px 0 25px; border-top: 1px solid var(--border); position: relative; z-index: 2; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+.footer-brand-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 12px 0 16px; }
+.footer-social { display: flex; gap: 8px; }
+.footer-social-btn { width: 36px; height: 36px; background: var(--glass); border: 1px solid var(--border); border-radius: 10px; color: var(--text-muted); }
+.footer-social-btn:hover { background: var(--gradient1); color: white; }
+.footer-col-title { font-size: 14px; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-link { font-size: 13px; color: var(--text-muted); cursor: pointer; }
+.footer-link:hover { color: var(--primary); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 25px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-dim); flex-wrap: wrap; gap: 10px; }
+.footer-payment { width: 50px; height: 32px; background: var(--glass); border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--text-dim); font-weight: 700; }
+.footer-payments { display: flex; gap: 10px; }
